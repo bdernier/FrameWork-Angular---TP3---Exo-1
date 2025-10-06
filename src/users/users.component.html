@@ -1,0 +1,13 @@
+<section>
+  <h2>Utilisateurs</h2>
+
+  @if(loading) {<div>Chargement...</div>}
+  @if(error) {<div class="error" >{{error}}</div>}
+
+  <ul *ngIf="!loading && !error">
+    <li *ngFor="let u of users">
+      <strong>{{ u.name }}</strong> — {{ u.email }}<br />
+      <small>{{ fullAddress(u) }}</small>
+    </li>
+  </ul>
+</section>
