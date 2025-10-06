@@ -1,10 +1,9 @@
 import { Component, signal, ViewChild, AfterViewInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { UsersComponent } from '../users/users.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, UsersComponent],
+  imports: [UsersComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
